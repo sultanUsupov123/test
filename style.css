@@ -1,0 +1,131 @@
+div {
+    height: 100px;
+  }
+  
+  .main-block {
+    width: 1000px;
+    background-color: blue;
+    padding: 10px;
+  }
+  
+  .block-1 {
+    width: 50%;
+    background-color: yellow;
+  }
+  
+  .block-1-1 {
+    width: 25%;
+    background: pink;
+  }
+  
+  .block-1-2 {
+    width: 10%;
+    background-color: aqua;
+  }
+  
+  .block-inner {
+    width: 50vw;
+    background-color: brown;
+  }
+  .container{
+    width: 1000px;
+    height: 500px;
+    background-color: antiquewhite;
+    overflow: hidden;
+  }
+  .block{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    /* название анимации (keyframes)*/
+    animation-name: dvd;
+    /*  определяет время. в течении которого должен пройти один цикл*/
+    animation-duration: 5s;
+    /* настраивает ускорение анимации*/
+    animation-timing-function: ease-in-out;
+    /*настраиваеттзадержку до начала анимации*/
+    animation-delay: 1s;
+    /* посторяет количество анимации*/
+    animation-iteration-count: infinite;
+    /*дает возможность при каждом повторе анимации следовать по альтернотивному пути. т.е продолжить с конечной точкт*/
+    animation-direction: alternate;
+  }
+  
+  @keyframes dvd{
+    0%{
+      margin-top: 0;
+    }
+    50%{
+      margin-top: 150px; 
+      margin-left: 400px;
+    }
+  }
+  #man{
+    position: absolute;
+    z-index: 2;
+    margin-top: 200px;
+    animation: people 10s ease 0s infinite;
+    animation-duration: 5s;
+  }
+  #road{
+
+    width: 1100px;
+    position: fixed;
+  }
+  @keyframes people {
+    from {
+      margin-top: 200px;
+    }
+    to {
+      margin-top: 200px;
+      margin-left: 900px;
+    }
+  }
+  input {
+    width: 400px;
+    height: 70px;
+    font-size: 18px;
+    color: blue;
+    border: none;
+    border-radius: 30px;
+    background-color: lightgray;
+    transition-duration: 2s;
+    transition-delay: 1s;
+    transition: 2s 1s;
+  }
+  
+  input:focus {
+    background-color: rgb(152, 152, 152);
+    height: 100px;
+  }
+
+  button{ 
+    width: 200;
+  height: 80px;
+  font-size: 18px;
+  color: red;
+  border: none;
+  background-color: aqua;
+  }
+  button:hover{
+    background-color: black;
+  }
+  input:placeholder{
+    font-size: 40px;
+  }
+/* AOS */
+.main{
+  width: 500px;
+  height: 100%;
+  margin: 100px auto;
+  border: 1px solid black;
+}
+.children{
+  width: 90%;
+  border: 1px solid red;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px auto;
+}
